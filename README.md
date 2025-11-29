@@ -3,6 +3,10 @@
 A lightweight, research-oriented pipeline for **trio-based structural variant (SV) analysis** using a combination of Python, AWK, and BEDTools.  
 The tool is designed to work on **multi-sample Delly VCF (GRCh38/hg38)** files containing structural variants.
 
+<p align="center">
+  <img src="banner_dark.png" width="900">
+</p>
+
 This pipeline:
 
 - Allows users to manually choose **three samples** to form a trio
