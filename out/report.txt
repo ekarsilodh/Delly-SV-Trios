@@ -1,0 +1,76 @@
+===== TRIO ROLE SEARCH (Mendelian violations) =====
+Assuming child=HG00514, parent1=HG00512, parent2=HG00513 → violations=3
+Assuming child=HG00514, parent1=HG00513, parent2=HG00512 → violations=3
+Assuming child=HG00512, parent1=HG00514, parent2=HG00513 → violations=1029
+Assuming child=HG00512, parent1=HG00513, parent2=HG00514 → violations=1029
+Assuming child=HG00513, parent1=HG00514, parent2=HG00512 → violations=1037
+Assuming child=HG00513, parent1=HG00512, parent2=HG00514 → violations=1037
+
+Selected trio = child=HG00514, parent1=HG00512, parent2=HG00513 because this 
+assignment had the smallest number of Mendelian violations 
+(3) among all permutations.
+
+===== TRIO ROLES =====
+Child    : HG00514
+Parent1  : HG00512
+Parent2  : HG00513
+
+===== COLUMN NUMBERS =====
+Child col   : 12
+Parent1 col : 10
+Parent2 col : 11
+
+===== SVTYPE COUNTS =====
+  SVTYPE  COUNT
+0    DEL  11701
+1    INS   5282
+2    DUP    169
+
+===== De Novo Calls =====
+Written to: ../out/de_novo_calls.txt and ../out/de_novo_calls.tsv
+
+=== De Novo Variants ===
+chr7:57981233  REF=DEL00036862  ALT=N  QUAL=<DEL>  FILTER=DEL  SVTYPE=NA  HG00514_GT=0/0, HG00512_GT=./., HG00513_GT=0/0
+chr13:105744786  REF=DEL00061758  ALT=N  QUAL=<DEL>  FILTER=DEL  SVTYPE=NA  HG00514_GT=0/0, HG00512_GT=./., HG00513_GT=0/0
+chr14:105745717  REF=DEL00064459  ALT=N  QUAL=<DEL>  FILTER=DEL  SVTYPE=NA  HG00514_GT=0/0, HG00512_GT=./., HG00513_GT=0/0
+chr22:24316368  REF=DEL00081047  ALT=N  QUAL=<DEL>  FILTER=DEL  SVTYPE=NA  HG00514_GT=0/0, HG00512_GT=./., HG00513_GT=0/0
+
+
+===== ANNOTATION using bedtools + hg38 / Clinvar / ClinGen =====
+Total SVs analysed                       : 17152
+hg38 gene annotation BED                 : ../databases/hg38_genes.bed
+hg38 exon annotation BED                 : ../databases/hg38_exons.bed
+ClinGen HI genes BED (GRCh38)            : ../databases/ClinGen_haploinsufficiency_gene_GRCh38.bed
+ClinGen TS genes BED (GRCh38)            : ../databases/ClinGen_triplosensitivity_gene_GRCh38.bed
+ClinGen recurrent CNV BED (hg38)         : ../databases/ClinGen recurrent CNV-hg38.bed
+ClinVar pathogenic SV BED (GRCh38)       : clinvar_SV_clean.bed
+
+SVs overlapping ≥1 hg38 gene             : 11919 / 17152
+SVs overlapping ≥1 hg38 exon             : 1248 / 17152
+SVs overlapping ≥1 ClinGen HI gene       : 1009 / 17152
+SVs overlapping ≥1 ClinGen TS gene       : 875 / 17152
+SVs overlapping ≥1 recurrent CNV region  : 428 / 17152
+SVs overlapping ≥1 ClinVar pathogenic SV : 0 / 17152
+
+
+===== CLINICALLY PRIORITISED SVs based on PATHOGENICITY TIERS =====
+Output file: clinically_prioritised_SVs.tsv
+Tier counts (Tier 0/1/2 only):
+  Tier2_exonic_large             : 9
+  Tier1_HI_del                   : 7
+  Tier1_recurrent_CNV            : 7
+  Tier2_exonic_large_de_novo     : 1
+
+Top candidate variants (first 10):
+CHROM       POS   END_INT SVTYPE  SVLEN_BP                                                                                                                                   GENE_LIST    INHERITANCE  PATHOGENICITY_TIER
+ chrX  77865888  77868370    DEL      2482                                                                                                                                       MAGT1   inherited_p1        Tier1_HI_del
+ chr8 143551894 143554070    DEL      2176                                                                                                                       ENSG00000254859,GSDMD   inherited_p1        Tier1_HI_del
+chr11  10271181  10272288    DEL      1107                                                                                                                        ENSG00000254719,SBF2   inherited_p1        Tier1_HI_del
+chr18  47853242  47853437    DEL       195                                                                                                                               MTCO2P2,SMAD2 inherited_both        Tier1_HI_del
+ chr8  18067106  18067135    DEL        29                                                                                                                                       ASAH1 inherited_both        Tier1_HI_del
+chr20  13817802  13817825    DEL        23                                                                                                                                     NDUFAF5 inherited_both        Tier1_HI_del
+ chr9   2191856   2191875    DEL        19                                                                                                                     ENSG00000306181,SMARCA2 inherited_both        Tier1_HI_del
+chr17  36088877  36195492    DEL    106615 CCL3,CCL3-AS1,CCL3L3,CCL4,ENSG00000274767,ENSG00000276241,ENSG00000282738,ENSG00000289485,ENSG00000306500,ENSG00000306545,RN7SL301P,TBC1D3B   inherited_p2 Tier1_recurrent_CNV
+chr22  23931955  23969109    DEL     37154                 DDTL,ENSG00000206090,ENSG00000228039,ENSG00000231271,ENSG00000290199,ENSG00000298703,ENSG00000298765,ENSG00000298810,GSTT2B inherited_both Tier1_recurrent_CNV
+chr17  36446544  36459257    DEL     12713                                                                                                                                    TBC1D3JP inherited_both Tier1_recurrent_CNV
+
