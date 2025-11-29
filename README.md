@@ -15,7 +15,6 @@ This pipeline:
 - Generates summary TSV files, text reports, and optional plots
 
 > ⚠️ **For research and teaching only. Not a clinical diagnostic pipeline.**  
-> No biological datasets are distributed with this repository.
 
 ---
 
